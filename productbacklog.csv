@@ -1,0 +1,81 @@
+﻿S. No.,,Feature,Story Number,Description(Card),Acceptance Criteria(Confirmation),Intial Size Estimate(SP),Business Priority,Sprint Number,Comments
+,,Home Page,US001,As a user/admin I want to visit the homepage,"As a user (admin/visitor) the following should be visible on the page
+- On the left side of the page, an image related to our portal will appear.
+- On the right side, ""Payroll Management System"" will be displayed with some information  regarding the portal.
+- A Login Button (of type Button) will appear.
+- Some additional features will be displayed at the bottom of the page like:
+   1. Feedback
+   2. Contact Us
+   3. Ask a Question
+   4. Report an issue
+
+",M,1,,
+1,Admin,Admin Login,US002,"As an admin, I want to login on the platform","
+Admin should be able to :
+
+- Select ""Administrator"" from the drop-down list having 3 different options: 
+   1. Administrator
+   2. Payroll Admin
+   3. Employee
+- Enter username of type Text(hardcoded) containing 7 numeric digits ranging between 0-9
+- Enter password of type text (hardcoded) containing minimum 8 characters (Atleast 1 Uppercase alphabet, 1 lowercase alphabet, 1 numerical value and 1 special character)
+- Click on Login Button of type Submit.
+- If credentials are wrong then a pop up message will appear i.e. ""Wrong crendentials. Try again"" and redirect back to Login page.
+- Only 3 attempts are allowed. After 3rd attempt, admin can't login for the next 24 hours.
+- After successful login admin redirect to dashboard.
+
+",L,2,,
+,,Admin Dashboard,US003,"As an admin, I want to visit dashboard.","Admin should be able to :
+- There should be a search bar for searching the employee using their employee id/name.  :
+- Add employee details
+- Update employee details.
+- Delete Employee
+- Logout ",L,3,,
+,,Add Employee Details,US004,As a admin I want to add employee detaills.,"
+Admin can add the following details of employee:
+
+- Full name: of type text and not more than 50 alphabets. 
+- Employee Id: Of type text containing 7 digits between 0-9.
+- Pan Number: PAN number of type text must consist first 5 alphabets in caps, next 4 digits and last alphabet in caps
+- Contact Number: Contact number must contain 10 digits and must start with 6, 7, 8, 9
+- Account Number: Of type text containing 9 to 18 numerical digits
+- Employee Email Id: of type Email and employee email id must be unique consisting of alphanumeric field and it should contain '@' and should end with domain name
+- Aadhar Number: Aadhar number must be of length 12 numerical digits.  
+- Salary Grade scale: dropdown menu consisting of 4 options, C1, C2, C3, C4. 
+- A confirmation pop-up message will appear consisting of 'confirm' and 'cancel' button
+- On clicking confirm button, A pop up message will appear stating that ""Employee Added"" and it will redirect admin to Admin Dashboard
+- On clicking cancel button it will again comeback to the ""Add employee detail"" page ",L,5,,
+,,Update Employee Details,US005,As a admin I want to update employee detaills.,"
+Admin can update the following details of employee:
+
+- Full name: of type text and not more than 50 alphabets.
+- Contact Number: Contact number must contain 10 digits and must start with 6, 7, 8, 9
+- Account Number: Of type text containing 9 to 18 digits
+- Employee Email Id: of type Email and employee email id must be unique alphanumeric and it should contain '@' and should end with domain name
+- Salary Grade scale: dropdown menu consists of 4 options, C1, C2, C3, C4. 
+- A confirmation pop up message will appear ""Do you want to update the details"" consisting of 'confirm' and 'cancel' button.
+- On clicking confirm button, A pop up message will appear stating that ""Employee details updated"" and it will redirect admin to Admin Dashboard
+- On clicking cancel button it will again comeback to update employee detail page.",L,6,,
+,,View Employee Details,US006,As a admin I want to view employee detaills.,"
+The admin should be able to view employee details.
+- Search bar: The Admin Dashboard should include a search bar that allows the admin to search for employee details using either the Employee ID or Employee Name
+- The search result should be paginated displaying a maximum of 10 rows per page
+- A 'Next' button should be provided to allow navigation to additional search results. 
+- A 'Back' button should be provided to allow navigation back to previous set of result
+- A 'Admin dashboard' button should be provided to allow admin to back to admin dashboard
+",L,4,,
+,,Delete Employee Details,US007,As an admin I want to delete employee detaills.,"
+The admin should be able to delete employee records using the Employee ID:
+- A input field where admin will enter the employee Id 
+- If no such employee id exist a message will show that ""Invaild employee ID"".
+- If employee ID exist then all the details will be shown and there will a ""Delete"" button
+- On click the delete button a pop-up message will be shown to confim deletion ""Do you really want to delete the details"" and there will be 2 buttons 'Yes' and 'No'
+- On clicking 'yes'  a pop-up message of 'sucessfull deletion' will be shown and a 'OK' button will be there. it will close the pop up  
+- On clicking 'No' it will come back deletion page.
+- An 'Admin dashboard' button should be provided to allow admin to redirect back to admin dashboard.
+
+",L,7,,
+,,Admin Log Out,US008,As an admin I want to log out of the platform,"The admin should be able to logout of the portal:
+- Log out button of type submit. It will log out and redirect to home page. 
+- After successfull logout a pop up will appear  ""You have been logged out successfully"".
+- Redirect to the homepage.",M,8,,
