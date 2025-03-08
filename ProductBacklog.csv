@@ -1,0 +1,127 @@
+﻿S. No.,,Feature,Story Number,Description(Card),Acceptance Criteria(Confirmation),Intial Size Estimate(SP),Business Priority,Sprint Number,Comments
+,,HomePage,US001,Entry point for all users,"
+- On the left side of the page, an image related to our portal will appear.
+- On the right side, ""Payroll Management System"" will be displayed with some information  regarding the portal.
+- A Login Button (of type Button) will appear.
+- Some additional features will be displayed at the bottom of the page like:
+   1. Feedback
+   2. Contact Us
+   3. Ask a Question
+   4. Report an issue
+
+",,,,
+1,Admin,Admin Login,US002,"As an admin, I want to login on the platform","
+Admin should be able to :
+
+- Select ""Administrator"" from the drop-down list having 3 different options: 
+   1. Administrator
+   2. Payroll Admin
+   3. Employee
+- Enter username of type Text (hardcoded)
+- Enter password of type text (hardcoded) containing minimum 8 characters (Atleast 1 Uppercase alphabet, 1 lowercase alphabet, 1 numerical value and 1 special character)
+- Click on Login Button of type Submit.
+- If credentials are wrong then a pop up message will appear i.e. ""Wrong crendentials. Try again"" and redirect back to Login page.
+- Only 3 attempts are allowed. After 3rd attempt, admin can't login for the next 24 hours.
+- After successful login admin redirect to dashboard.
+
+",M,1,2,
+,,Admin Dashboard,US003,"As an admin, I want to land on dashboard.","Admin should be able to :
+- there should be a search bar for searching the employee using their employee id/name. 
+- Buttons for navigating futher pages:
+  1. Add employee
+  2. Update employee details.
+  3. Delete Employee
+  4. Logout ",,,,
+,,Add Employee Details,US004,As a admin I want to add employee detaills.,"
+Admin can add the following details of employee:
+
+- Full name: of type text and not more than 50 alphabets. 
+- Employee Id: Of type text containing 4 integer digits.
+- Pan Number: PAN number of type text must consist 5 alphabets in caps, 4 numbers, 1 alphabet in caps
+- Contact Number: Contact number must contain 10 digits and must start with 6, 7, 8, 9
+- Account Details: Of type text containing 9 to 18 digits
+- Employee Email Id: Employee email id must be unique and it should contain '@' and should end with domain name
+- Aadhar Number: Aadhar number must be of length 12 digits.  
+- Salary Grade scale: dropdown menu consists of 4 options, C1, C2, C3, C4. 
+- A confirmation pop message will appear consisting of confirm and cancel button
+- On clicking confirm button, A pop up message will appear stating that Employee Added and it will redirect admin to Admin Dashboard
+- On clicking cancel button it will again comeback to the add employee detail page ",L,2,2,
+,,Update Employee Details,US005,As a admin I want to update employee detaills.,"
+Admin can update the following details of employee:
+
+- Full name: of type text and not more than 50 alphabets.
+- Contact Number: Contact number must contain 10 digits and must start with 6, 7, 8, 9
+- Account Details: Of type text containing 9 to 18 digits
+- Employee Email Id: Employee email id must be unique and it should contain '@' and should end with domain name
+- Salary Grade scale: dropdown menu consists of 4 options, C1, C2, C3, C4. 
+- A confirmation pop message will appear consisting of confirm and cancel button
+- On clicking confirm button, A pop up message will appear stating that Employee details updated and it will redirect admin to Admin Dashboard
+- On clicking cancel button it will again comeback to the add employee detail updation page  ",L,3,2,
+,,View Employee Details,US006,As a admin I want to view employee detaills.,"
+- Search bar: The Admin Dashboard should include a search bar that allows the admin to search for employee details using either the Employee ID or Employee Name
+- The search result should be paginated displaying a maximum of 10 rows per page
+- A 'Next' button should be provided to allow navigation to additional search results. 
+- A 'Back' button should be provided to allow navigation back to previous set of result
+- A 'Admin dashboard' button should be provided to allow admin to back to admin dashboard
+",M,4,2,
+,,Delete Employee Details,US007,As an admin I want to delete employee detaills.,"- The admin should be able to delete employee records using the Employee ID.
+- A input field where admin will enter the employee Id 
+- If no such employee id exist a message will show that invaild employee ID.
+- If employee ID exist then all the details will be shown and there will a delete button
+- On click the delete button a pop message will be shown to confimation deletion and there will be 2 button 'Yes' and 'No'
+- On clicking 'yes'  a pop message of 'sucessfull deletion' will be shown and a 'OK' button will be there. it wil close the pop up  
+- A 'Admin dashboard' button should be provided to allow admin to back to admin dashboard
+
+",M,11,2,
+,,Admin Log Out,US008,As an admin I want to log out of the platform,"- Log out button: It will log out and redirect to login page. 
+- Pop up will show if successfull logout happens.
+- Redirect to the homepage.",,,,
+2,Payroll Administrator,Payroll Administrator Login,US008,"
+As an Payroll Administrator I want to login on the platform ","
+Payroll administrator can login with following fields:
+
+- Payroll Administrator Id (predefined): Integer type(4 digits)
+-Payroll Adminstrator password (predefined) : Minimum 8 digits(including 1 Upper case, 1 lower case letter, 1 digit, 1 special character)
+-On successful login a message ""Login successful"" will be displayed.
+-On entering wrong credentials, a message ""Wrong credentials. Try again."" will be displayed.
+",M,6,2,
+,,View Salary Details,US009,As a Payroll Administrator I want to view Salary detaills.," 
+Employee details will be shown:
+
+-Full Name:Text type(max 50 characters)
+-Employee Id: Integer type (4 digit unique Id)
+-Email id: String type
+-Contact number: 10 digit contact number starting with either 6,7,8,9
+-PAN Card: 10 digit PAN Card no (5 Uppercase letters, 4 digits, 1 Uppercase letter)
+-View the basic salary that has been provided by admin.
+",L,7,2,
+,,Calculate Salary of employee,US010,As a Payroll Administrator I can calculate  salary of employee based on pay grade data from admin + house allowance + bonus ,"Salary grades will be as follows:
+- There will be 4 grades i.e. C1, C2, C3,C4.
+- C1 will have basic salary of Rs 3 lacs.
+- C2 will have basic salary of Rs 4 lacs.
+- C3 will have basic salary of Rs 5 lacs.
+- C4 will have basic salary of Rs 6 lacs.",L,8,2,
+,,Payroll deduction,US011,As a Payroll Administrator I can calculate gross salary after tax ,"- Salary must lie within pay grade and tax regime
+- The two tax regime provided will be- Old and New Tax Regime.",M,9,2,
+,,Payroll slip genration,US012,As an Payroll Administrator I want to generate payroll slip.,"-A downlod button will appear to give user the option to download payslip.
+- Downloaded file should be in .pdf format",L,10,2,
+,,Payroll Administrator Log Out,US013,,,,,,
+3,Employee,Employee login,US014,As an employee I want to login on the platform,"
+Employee can login with following fields:
+
+-Emloyee Id (given by admin): Integer type(4 digits)
+-Employee Password : Minimum 8 digits(including 1 Upper case, 1 lower case letter, 1 digit, 1 special character)
+-On successful login a message ""Login successful"" will be displayed.
+-On entering wrong credentials, a message ""Wrong credentials. Try again."" will be displayed.
+-After sucessfull login employee will rediect to emloyee dashboard.
+",XL,12,2,
+,,Update Personal Details,US015,As an employee I want to update my personal information,"
+Employee can update following fields:
+
+-Full name: of type text and not more than 50 characters 
+-Contact Number: Contact number must contain 10 digits and must start with 6, 7, 8, 9
+-Account Details: Of type integer containing 9 to 18 digits
+",M,13,2,
+,,View Payroll Slips,US016,As an employee I want to view/download Payroll Slip genrated by Payroll Administrator,- Downloaded file should be in .pdf format,XL,14,2,
+,,Employee logout,US017,As an employee I want to logout from the platform,"-Pop up will show if successfull logout happens
+-Redirect to the homepage",,,,
